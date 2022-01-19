@@ -16,4 +16,4 @@ router.get('/blogs/:blogId', middle.authenticate, blogController.checkdeletestat
 router.get('/deletedBlogs', middle.authenticate, blogController.deletebyparams);
 
 
-module.exports = router;
+module.exports = router;                                 
