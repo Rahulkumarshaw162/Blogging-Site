@@ -12,8 +12,8 @@ router.post('/login', authorController.login);
 router.post('/blogs',middle.authenticate, blogController.createBlogs);
 router.get('/getblogs', middle.authenticate, blogController.getBlogs);
 router.put('/blogs/:blogId', middle.authenticate, blogController.updateBlog);
-router.get('/blogs/:blogId', middle.authenticate, blogController.checkdeletestatus);
-router.get('/deletedBlogs', middle.authenticate, blogController.deletebyparams);
+router.delete('/blogs/:blogId', middle.authenticate, blogController.checkdeletestatus);
+router.delete('/deletedBlogs', middle.authenticate, blogController.deletebyparams);
 
 
 module.exports = router;                                 

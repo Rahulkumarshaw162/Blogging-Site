@@ -10,7 +10,7 @@ const authenticate = function (req, res, next) {
         } else {
             let decodedToken = jwt.verify(authToken, "radium-secret");
 
-            console.log(decodedToken,"decodedtoken")
+            // console.log(decodedToken,"decodedtoken")
 
             if (decodedToken) {
                    req["validToken"] = decodedToken

@@ -15,8 +15,8 @@ const createAuthor = async function (req, res) {
 }
 
 module.exports.createAuthor = createAuthor
-
-
+//////////////
+// hkyu
 //phase 2 login
 const login = async function (req, res) {
   try {
@@ -27,7 +27,7 @@ const login = async function (req, res) {
       let user = await AuthorModel.findOne({ email: email, password: password })
 
       if (user) {
-        let payload = { authorId: user["_id"] }
+        let payload = { userId: user["_id"] }
         var token = jwt.sign(payload, "radium-secret");
         res.status(200).send({ status: true, data: user, token: token })
       } else {
